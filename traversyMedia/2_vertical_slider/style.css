@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh; 
+}
+
+.slider-container {
+    /*One way to modify the default position of an element is by setting its position property to relative.
+    This value allows you to position an element relative to its default static position on the web page.
+    */
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.left-slide > div {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.left-slide h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.right-slide {
+    height: 100%;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transition: transform .5s ease-in-out;
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button{
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+
+button:hover{
+    color: #222;
+}
+
+button:focus{
+    outline: none;
+    /*The :focus pseudo class in CSS is used for styling an element that is currently targeted by the keyboard, or activated by the mouse.*/
+    /*Any element (most commonly <input>s and <textarea>s) are in “focus” when they are selected and ready to enter text (like when a cursor is blinking). Mouse users can click them (or their related label) to focus, and keyboard users can TAB into them.*/
+}
+
+.slider-container .action-buttons button {
+   position: absolute;
+   left: 35%;
+   top: 50%;
+   z-index: 100;
+}
+
+.slider-container .action-buttons .down-button {
+    /*The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.*/
+
+    /*translateX()
+    The translateX() CSS function repositions an element horizontally on the 2D plane. Its result is a <transform-function> data type.*/
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+.slider-container .action-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
