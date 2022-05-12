@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg {
+    
+    background-image: url('https://picsum.photos/id/1019/300/400');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    /*background: [background-image] [background-position] / [background-size] [background-repeat] [background-attachment] [background-origin] [background-clip] [background-color];*/
+    /* body { background-image: url(photo.jpg); background-position: center center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-origin: padding-box; background-clip: border-box; background-color: #ccc; } */
+    /* or */
+    /* body { background: url(photo.jpg) center center/cover no-repeat fixed padding-box border-box #ccc; } */
+
+    position: absolute; /*When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page*/
+    top: -30px;
+    left: -30px;
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
+    z-index: -1;
+    filter: blur(0px);
+    
+}
+
+.loading-text{
+    font-size: 50px;
+    color: #fff;
+}
